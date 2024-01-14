@@ -66,9 +66,7 @@ class Game:
                 if self.botonsalida.rect.collidepoint(pos):
                     self.game = False
                 elif self.botonrock.rect.collidepoint(pos):
-                    sonido = pygame.mixer.Sound(ROCKSD)
-                    sonido.set_volume(0.2)
-                    sonido.play()
+                    
                     if self.botonrock == self.artint:
                         self.respuesta = "Empate"
                     elif self.opcionesp == self.botonrock and self.artint == self.botonsissors or self.artint == self.botonlizzard:
@@ -79,9 +77,7 @@ class Game:
                         self.scoremaquina += 1
 
                 elif self.botonsissors.rect.collidepoint(pos):
-                    sonido = pygame.mixer.Sound(SISSORSSD)
-                    sonido.set_volume(0.1)
-                    sonido.play()
+                    
                     if self.botonsissors == self.artint:
                         self.respuesta = "Empate"
                     elif self.opcionesp == self.botonsissors and self.artint == self.botonpaper or self.artint == self.botonlizzard:
@@ -92,9 +88,7 @@ class Game:
                         self.scoremaquina += 1
 
                 elif self.botonpaper.rect.collidepoint(pos):
-                    sonido = pygame.mixer.Sound(PAPERSD)
-                    sonido.set_volume(0.3)
-                    sonido.play()
+                  
                     if self.botonpaper == self.artint:
                         self.respuesta = "Empate"
                     elif self.opcionesp == self.botonpaper and self.artint == self.botonrock or self.artint == self.botonspok:
@@ -105,9 +99,7 @@ class Game:
                         self.scoremaquina += 1
 
                 elif self.botonlizzard.rect.collidepoint(pos):
-                    sonido = pygame.mixer.Sound(CODYSD)
-                    sonido.set_volume(0.2)
-                    sonido.play()
+                
                     if self.botonlizzard == self.artint:
                         self.respuesta = "Empate"
                     elif self.opcionesp == self.botonlizzard and self.artint == self.botonspok or self.artint == self.botonpaper:
@@ -118,9 +110,7 @@ class Game:
                         self.scoremaquina += 1
 
                 elif self.botonspok.rect.collidepoint(pos):
-                    sonido = pygame.mixer.Sound(SPOKSD)
-                    sonido.set_volume(0.7)
-                    sonido.play()
+                    
                     if self.botonspok == self.artint:
                         self.respuesta = "Empate"
                     elif self.opcionesp == self.botonspok and self.artint == self.botonrock or self.artint == self.botonsissors:
@@ -215,9 +205,7 @@ class Game:
     def update(self):
         if self.playing:
             pass
-            
-            
-            
+                   
         
     def scores(self):
         
