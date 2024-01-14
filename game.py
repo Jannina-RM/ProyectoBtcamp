@@ -33,7 +33,7 @@ class Game:
     def star(self):
         self.menu()
         self.new()
-        
+
     def new(self):
         self.scoreplayer = 0
         self.scoremaquina = 0
@@ -183,32 +183,7 @@ class Game:
 
         self.wait()
 
-    def wait(self):
-        wait = True
-        pygame.mixer.init()
-        pygame.mixer.music.load("music/musicamenu.wav")
-        pygame.mixer.music.play(-1, 0, 0)
-        pygame.mixer.music.set_volume(0.1)
-        while wait:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    wait = False
-                    self.rungame = False
-                    pygame.quit()
-                    sys.exit()
-                elif event.type == pygame.MOUSEBUTTONDOWN:
-                    pos = pygame.mouse.get_pos()
-                    if self.botonquit.rect.collidepoint(pos):
-                        wait = False
-                        self.rungame = False
-                        pygame.quit()
-                        sys.exit()
-                    if self.botonplay.rect.collidepoint(pos):
-                        wait = False
-                        pygame.mixer.init()
-                        pygame.mixer.music.load(MUSICGAME)
-                        pygame.mixer.music.play(-1, 0, 0)
-                        pygame.mixer.music.set_volume(0.1)
+     
 
     def draw(self):
         self.scores()
