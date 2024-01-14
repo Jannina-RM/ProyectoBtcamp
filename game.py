@@ -33,6 +33,7 @@ class Game:
     def star(self):
         self.menu()
         self.new()
+        
     def new(self):
         self.scoreplayer = 0
         self.scoremaquina = 0
