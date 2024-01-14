@@ -171,8 +171,6 @@ class Game:
 
         pygame.display.flip()
 
-        self.wait()
-
      
 
     def draw(self):
